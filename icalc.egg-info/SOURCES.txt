@@ -1,0 +1,6 @@
+icalc.egg-info/PKG-INFO
+icalc.egg-info/SOURCES.txt
+icalc.egg-info/dependency_links.txt
+icalc.egg-info/entry_points.txt
+icalc.egg-info/requires.txt
+icalc.egg-info/top_level.txt
