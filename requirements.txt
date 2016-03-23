@@ -1,3 +1,2 @@
 click==6.3
-## !! Could not determine repository location
-icalc==0.1
+-e git+git@github.com:JonW27/iCalc.git@563a308abb9bddc13481cd036599303def5a65f2#egg=icalc
