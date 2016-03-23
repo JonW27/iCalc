@@ -3,10 +3,9 @@ advanced cli calculator building off simple eval by Daniel Fairhead
 
 ## To install
 
-Git clone the repo or download as a zip and move it to where you see fit <br><br>
+Git clone the repo or download as a zip and move it to where you see fit. <br><br>
 ###Option 1
-iCalc requires virtualenv since your python version may differ. To install the project it is recommended you use pip. You can then run <code>$ pip install -r requirements.txt</code><br>
-Run <code>$ . venv/bin/activate</code> if you're on a Unix based system or <code>$ venv\scripts\activate</code> if you're somehow (for some reason) using Windows.<br>
+iCalc requires virtualenv since your python version may differ. First, if you don't already have it, get pip. Pip for *nix machines can be installed via <code>$ sudo easy_install pip</code>. For windows consult http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip and download the pip pkg. Once that is done, get virtualenv by running <code>$ sudo pip install virtualenv </code> Ignore sudo if you're using Windows. You can then run the following: <pre>$ cd iCalc <br>$ virtualenv venv <br>$ source venv/bin/activate <br>$ pip install -r requirements.txt </pre><br>
 Run <code>icalc --help</code> to show the page.<br>
 Documentation is provided via --help.
 
