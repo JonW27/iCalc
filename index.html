@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+                  ___           ___           ___       ___     
+      ___        /\  \         /\  \         /\__\     /\  \    
+     /\  \      /::\  \       /::\  \       /:/  /    /::\  \   
+     \:\  \    /:/\:\  \     /:/\:\  \     /:/  /    /:/\:\  \  
+     /::\__\  /:/  \:\  \   /::\~\:\  \   /:/  /    /:/  \:\  \ 
+  __/:/\/__/ /:/__/ \:\__\ /:/\:\ \:\__\ /:/__/    /:/__/ \:\__\
+ /\/:/  /    \:\  \  \/__/ \/__\:\/:/  / \:\  \    \:\  \  \/__/
+ \::/__/      \:\  \            \::/  /   \:\  \    \:\  \      
+  \:\__\       \:\  \           /:/  /     \:\  \    \:\  \     
+   \/__/        \:\__\         /:/  /       \:\__\    \:\__\    
+                 \/__/         \/__/         \/__/     \/__/    
+
+-->
+<html lang="en">
+    <head>
+        <title>iCalc (formerly calc/bron)</title>
+        <meta charset="UTF-8">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+        <style>
+            h1 {
+                font-family: Lato, Helvetica, sans-serif;
+                font-weight: 300;
+                text-align: center;
+                font-size: 66px;
+            }
+            p {
+                font-family: Cambria, "Times New Roman", serif;
+                font-size: 16px;
+            }
+            #github {
+                position:absolute;
+                right: 10px;
+                top: 10px;
+                text-decoration: none;
+                color: #2F4F4F;
+                font-family: Lato, Helvetica, sans-serif;
+                display:block;
+            }
+            #github:hover {
+                background-color:#D3D3D3;
+                font-size: 18px;
+            }
+            small {
+                font-size: 46px;
+            }
+            #callto {
+                background:url(https://images.unsplash.com/uploads/14128434147336bfb286b/e76494ac?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=0d14ef0b6c5eeee1561a0e340d48ae41);
+                filter:blur(5px);
+            }
+            .subtitle {
+                font-size: 24px;
+            }
+            .header {
+                font-size: 36px;
+            }
+        </style>
+        <script>
+            function comeOn() {
+                document.getElementById('github').innerHTML = "YEAH! LET'S DO IT!";
+            }
+            
+            function noooo() {
+                document.getElementById('github').innerHTML = "Contribute on github pleaseeeeee";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="callto">
+        <a href="https://github.com/JonW27/iCalc" id="github" onmouseover="comeOn();" onmouseout="noooo();" onclick="alert('Thanks fellow friend!\n You can contribute to the README.md, documentation, or add features to the application. Please work on the git beta branch when making changes. :D');">Contribute on github</a>
+        <h1>iCalc<br><small>a cli calculator built to harness your computer's computational power</small></h1>
+        </div>
+        <div id="content">
+            <p class="header">
+                Documentation
+            </p>
+            <p class="subtitle">
+                Installation
+            </p>
+            <p>
+                iCalc uses pip, the python package manager. You have pip automatically if your python version is greater than 3.0. To check your python version open up your terminal and run <code>$ python -v</code>. If your python version is less than 3.0 then installation depends on your operating system. For *NIX systems (darwin systems) like OSX and Linux you can install pip with python's older package manager easy_install. You run <code>$ sudo easy_install pip</code>. If you're on Windows however, you will need to download the python file get-pip.py from the project website and then run python on it plus some other stuff. The last time I checked the website's HTTPS certificate was invalid and I couldn't access it. Have fun. Your fault for choosing Windows (P.S.- you can try to get the package from <a href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip">here</a>, but I don't know if it works).<br><br>Now that you have pip, you'll need to install virtualenv. The problem with running python files on different systems is that python versions can differ and lead to errors and incompatibility. To deal with this virtualenv creates an entire new virtual environment with its own python version and pip packages. To get virtualenv, run <code>$ sudo pip install virtualenv</code> if you're darwin based, and omit sudo if you're on Windows.<br><br>
+                Now that you've done that, you can <code>$ git clone https://github.com/JonW27/iCalc.git</code>. Go to the directory via <code>$ cd iCalc</code> and run <code>$ virtualenv venv</code>. Then run <code>$ source venv/bin/activate</code>. This will take you into the virtualenv, marked by (venv) in the left margin of the terminal.<br><br>
+                The final installation step is to run <code>$ pip install -r requirements.txt</code>. This will build the project by downloading the pip package requirements in order for the project to work.<br><br>
+                Now that the installation is done you can run <code>$ icalc --help</code>
+            </p>
+            <p class="subtitle">
+                v0.1 iCalc calc options
+            </p>
+            <p>
+                <i>sin(arg)</i> - gets the sine of the parameter in radians.<br>
+                <i>cos(arg)</i> - gets the cosine of the parameter in radians.<br>
+                <i>tan(arg)</i> - gets the tangent of the parameter in radians.<br>
+                <i>sec(arg)</i> - gets the secant of the parameter, or reciprocal of the cosine, in radians.<br>
+                <i>csc(arg)</i> - gets the cosecant of the parameter, or reciprocal of the sine, in radians.<br>
+                <i>cot(arg)</i> - gets the cotangent of the parameter, or reciprocal of the tangent, in radians.<br>
+                <i>fact(arg)</i> - gets the factorial of the parameter, e.g. fact(3) = 3 * 2 * 1 = 6<br>
+                <i>sum(arg)</i> - gets the summation of the parameter, e.g. sum(3) = 3 + 2 + 1 = 6 <br>
+                <i>sqr(arg)</i> - gets the square of the parameter; wrapper of python ** operator. E.g. sqr(5) = 25<br>
+                <i>sqrt(arg)</i> - gets the square root of the parameter; its a  wrapper of python ** (1/2). E.g. sqrt(25) = 5<br>
+                <i>deg2rad(arg)</i> - converts the parameter from degrees to radians. E.g. 30 degrees becomes ~ 0.52 radians<br>
+                <i>deg2radf(arg)</i> - converts the parameter from degrees to radians in terms of pi. E.g. 30 degrees becomes pi/6 radians.<br>
+                <i>fib(arg)</i> - gets the parameter of the fibonacci sequence. E.g. fib(3) = 1,2,3 = 3. NOTE: The fibonacci sequence starts at 1.<br>
+                <i>prime(arg)</i> - returns True if the parameter is prime; returns False if the parameter is not prime. E.g. prime(7)->True, prime(12)->False<br>
+                <i>floor(arg)</i> - rounds the parameter down. E.g. floor(6.7)->6<br>
+                <i>ceil(arg)</i> - rounds the parameter up. E.g. floor(6.3)->7<br>
+                <i>rand()</i> - returns a random decimal value. NOTE: It does not have to be an integer.<br>
+                <i>randInt(lowerBound, upperBound)</i> - returns a random integer value between lowerBound and upperBound. NOTE: due to a bug, does not work. Will be patched in v0.1.5<br>
+                <i>abs(arg)</i> - returns the absolute value, or the parameter's distance from 0. E.g. abs(0) = 0<br>
+                <i>perm(n,r)</i> - returns the amount of possible orders n objects at r time can be when order matters. <br>
+                <i>comb(n,r)</i> - returns the amount of possible orders n objects at r time can be when order does not matter. <br>
+                <i>mod(x,y)</i> - Gets the modulo of x/y. Wrapper for the python operator %. E.g. mod(12,5)-> 2<br><br>
+                <u>
+                    Constants
+                </u>
+                <br>pi<br>e<br>heat of fusion (hf)<br>heat of vaporization (hv)<br>gravity (g)<br>Avogadro's number (L)<br>Planck's Constant (h).
+            </p>
+        </div>
+    </body>
+</html>    

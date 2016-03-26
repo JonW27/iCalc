@@ -52,8 +52,8 @@ def pi():
 
 @click.command()
 def v():
-    '''calc/bron version number'''
-    click.echo('iCalc v0.1')
+    '''iCalc version number'''
+    click.echo('iCalc v0.2')
 
 def square(x):
     return x ** 2
@@ -139,8 +139,8 @@ def ceil(x):
 def rand():
     return random.random()
 
-def randInt(x):
-    return random.randinit()
+def randInt(x,y):
+    return random.randint(x,y)
 
 def absolute(x):
     return abs(x)
